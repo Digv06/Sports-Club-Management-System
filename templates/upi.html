@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'"></script>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>PCCOE Sports Club | UPI</title>
+</head>
+<body style="background-image: url('static/a5.jpg') ;">
+
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="url_for('hello')">PCCOE Sports Club</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="{{ url_for('hello') }}">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('about')}}">About Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('ground') }}">Ground Booking</a>
+              </li>
+
+            </ul>
+            <form class="d-flex">
+              <button class="btn btn-outline-success"><a href="{{ url_for('signup') }}" style="text-decoration : none; color:#198754" >Sign Up</a></button>
+            </form>
+            <form class="d-flex mx-3">
+              <button class="btn btn-outline-success"><a href="{{ url_for('sign_in') }}" style="text-decoration : none; color:#198754" >Sign In</a></button>
+            </form>
+          </div>
+        </div>
+      </nav>
+
+<form action="/upi" method="post">
+<div class="container my-5" style="margin : 0  0 0 30%">
+
+
+<div class="row">
+
+	<aside class="col-sm-6">
+
+<article class="card">
+<div class="card-body p-5">
+
+<ul class="nav bg-light nav-pills rounded nav-fill mb-3" role="tablist">
+	<li class="nav-item">
+		<a class="nav-link " data-toggle="pill" href=" {{ url_for('pay') }}">
+		<i class="fa fa-credit-card"></i> Credit Card</a></li>
+	<li class="nav-item">
+		<a class="nav-link active " data-toggle="pill" href=" {{ url_for('upi_pay') }}">
+		<i class="fab fa-paypal"></i>  UPI</a></li>
+
+</ul>
+
+<div class="tab-content">
+<div class="tab-pane fade show active" id="nav-tab-card">
+	<p class="alert alert-success">Payment Gateway</p>
+	<form role="form">
+	<div class="form-group">
+		<label for="username">Full name </label>
+		<input type="text" class="form-control" name="username" placeholder="" required="">
+	</div> <!-- form-group.// -->
+
+	<div class="form-group">
+		<label for="cardNumber">UPI ID</label>
+		<div class="input-group">
+			<input type="text" class="form-control" name="upiId" placeholder="">
+			
+		</div>
+	</div> <!-- form-group.// -->
+
+    <div class="form-group">
+		<label for="cardNumber">UPI PIN</label>
+		<div class="input-group">
+			<input type="text" class="form-control" name="upiPin" placeholder="">
+			
+		</div>
+	</div> 
+
+	<a href="{{url_for('hello')}}" style="text-decoration: none; color: burlywood;"><button class="subscribe btn btn-primary btn-block" type="button"> Confirm</button></a>
+	</form>
+</div> <!-- tab-pane.// -->
+
+
+</div> <!-- tab-content .// -->
+
+</div> <!-- card-body.// -->
+</article> <!-- card.// -->
+
+
+	</aside> <!-- col.// -->
+</div> <!-- row.// -->
+
+</div>
+
+	</form>
+<!--container end.//-->
+
+<br><br>
+
+
+
+</body>
+</html>

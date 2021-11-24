@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>PCCOE Sports Club | About Us</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{{url_for('static',filename='main.css' ) }}">
+        <script src="{{url_for('static',filename='https://kit.fontawesome.com/dbed6b6114.js') }} " crossorigin="anonymous"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    </head>
+    <body>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">PCCOE Sports Club</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="{{ url_for('hello') }}">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('about')}}">About Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('ground') }}">Ground Booking</a>
+              </li>
+
+            </ul>
+            <form class="d-flex">
+              <button class="btn btn-outline-success"><a href="{{ url_for('signup') }}" style="text-decoration : none; color:#198754" >Sign Up</a></button>
+            </form>
+            <form class="d-flex mx-3">
+              <button class="btn btn-outline-success"><a href="{{ url_for('sign_in') }}" style="text-decoration : none; color:#198754" >Sign In</a></button>
+            </form>
+          </div>
+        </div>
+      </nav>
+
+        <section>
+            <div class = "image" style="margin-top: 20px">
+                <!-- image here -->
+            </div>
+
+            <div class = "content">
+                <h2>About Us</h2>
+                <span><!-- line here --></span>
+
+                <p>If you are a sports fan, you have come to the right place!
+                    Feel Free to contact us....
+                </p>
+
+                <ul class = "links">
+                    <li><a href = "#">Vision:-To provide opportunities </a></li>
+
+                    <div class = "vertical-line"></div>
+
+                    <li><a href = "#">Approach:-Promote and Develop Interest </a></li>
+
+                    <div class = "vertical-line"></div>
+                    
+                    <li><a href = "#">Process:-Register and Play!</a></li>
+                </ul>
+
+                <ul class = "icons">
+                    <li>
+                        <i class = "fa fa-twitter"></i>
+                    </li>
+                    <li>
+                        <i class = "fa fa-facebook"></i>
+                    </li>
+                    <li>
+                        <i class = "fa fa-github"></i>
+                    </li>
+                    <li>
+                        <i class = "fa fa-pinterest"></i>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        
+    </body>
+</html>
